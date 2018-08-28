@@ -1,0 +1,9 @@
+<div class="row h-100 align-items-end pre-article" *ngIf='currentPost.title == ""; else showPost'>
+	<div class="col p-4">
+		<h1>Hey there 👋</h1>
+		<h5 class="font-1">Welcome to my blog, I am a <b class="hover-blue"><div class="custom-tooltip p-2"><h6 class="m-0 font-1"><b>Click to see my Resume!</b></h6></div>software developer</b> mainly working with blockchain and web technologies.</h5>
+	</div>
+</div>
+<ng-template #showPost>
+	{{currentPost.title}} {{currentPost.description}}
+</ng-template>

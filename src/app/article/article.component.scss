@@ -1,0 +1,52 @@
+.pre-article {
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/main-bg.png);
+
+  .hover-blue {
+    transition: 0.25s ease-in-out color;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      color: #228be6;
+      .custom-tooltip {
+        transform: translate(-50%, -100%) scale(1);
+      }
+    }
+
+    .custom-tooltip {
+      color: white;
+      border-radius: 10px;
+      background: #e5ebf5;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: -5px;
+      transform-origin: 50% 100%;
+      transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1);
+      transform: translate(-50%, -100%) scale(0);
+
+      h6 {
+        white-space: nowrap;
+      }
+
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: " ";
+        border-style: solid;
+        border-width: 5px 5px 5px 5px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: #e5ebf5;
+      }
+    }
+  }
+}
